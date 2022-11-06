@@ -1,12 +1,12 @@
-import { useRouter } from 'next/router'
 import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { format } from 'date-fns'
 import InfoCard from '../components/InfoCard'
+import { useRouter } from 'next/router'
 
 function search({ searchResults }) {
-    const router = useRouter();
+    const router = useRouter()
     const { location, startDate, endDate, noOfGuests } = router.query;
 
     const formattedStartDate = format(new Date(startDate), "dd MMMM yy")

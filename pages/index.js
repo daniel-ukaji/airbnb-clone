@@ -5,7 +5,9 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import LargeCard from '../components/LargeCard'
 import MediumCard from '../components/MediumCard'
+// import SmallCard from '../components/SmallCard'
 import SmallCard from '../components/SmallCard'
+// import SmallCard2 from '../components/SmallCard2'
 import styles from '../styles/Home.module.css'
 
 export default function Home({ explore, cardsData }) {
@@ -20,15 +22,15 @@ export default function Home({ explore, cardsData }) {
     <Header />
     <Banner />
 
-    <main className='max-w-7xl mx-auto px-8 sm:px-16'>
+    <main className='max-w-full mx-auto px-8 sm:px-10'>
       <section className='pt-6'>
-        <h2 className='text-4xl font-semibold pb-5'>Explore Nearby</h2>
+        <h2 className='text-2xl font-semibold pb-1'>Explore Listings</h2>
       
       {/* Pull some data from a server - API endpoints */}
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
 
         {explore?.map(({ img, distance, location}) => (
-          <SmallCard 
+          <SmallCard
             key={img}
             img={img}
             distance={distance}
@@ -58,6 +60,7 @@ export default function Home({ explore, cardsData }) {
         buttonText="Get Inspired"
       />
 
+      
     </main>
 
 

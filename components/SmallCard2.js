@@ -3,18 +3,21 @@ import Image from 'next/image'
 
 function SmallCard({img, location, distance}) {
   return (
-    <div className='relative flex items-center m-2 mt-5 space-x-4 rounded-xl
-    cursor-pointer hover:bg-gray-100 hover:scale-105 transition transform duration-200
-    ease-out'>
-        <div className='relative h-72 w-72'>
-            <Image src={img} layout="fill" className='rounded-lg' />
+    <div className='relative flex flex-col m-1 mt-5 rounded-xl
+    cursor-pointer'>
+        <div className='relative h-60 w-60'>
+            <Image src={img} alt='' layout="fill" className='rounded-lg' />
         </div>
 
 
-        <div className='absolute top-5 right-1/3 pr-3 xl:right-1'>
-            <h2>{location}</h2>
-            {/* <h3 className='text-gray-500'>{distance}</h3> */}
+        <div>
+            <h2 className='absolute top-5 left-1/3 pr-3 xl:left-3 bg-slate-900/60 text-white px-2'>140k</h2>
         </div>
+        <div>
+          <h3 className='text-black'>{location}</h3>
+          <h3 className='text-gray-500'>{distance}</h3>
+        </div>
+        
     </div>
   )
 }
